@@ -19,6 +19,21 @@
     --color-grey-6:#12181b;
     --br-sm-2:14px;
     --box-shadow-1:0 3px 15px rgba(0,0,0,.2);
+}
+.light{
+    --color-primary:#ffffff;
+    --color-secondary:#F56692;
+    --color-white:#454e56;
+    --color-balck:#000000;
+    --color-grey-0:#f8f8f8;
+    --color-grey-1:#6c7983;
+    --color-grey-2:#6c7983;
+    --color-grey-3:#6c7983;
+    --color-grey-4:#454e56;
+    --color-grey-5:#f8f8f8;
+    --color-grey-6:#12181b;
+    --br-sm-2:14px;
+    --box-shadow-1:0 3px 15px rgba(0,0,0,.2);
 
 }
 body{
@@ -93,7 +108,7 @@ section{
 }
 .control{
     font-size: 1.1rem;
-    color: var(--color-grey-1);
+    color: var(--color-grey-2);
     background-color: var(--color-grey-4);
     margin: 0.7rem 0;
     border-radius: 50px;
@@ -103,6 +118,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: var(--box-shadow-1);
 }
 @media(max-width:600px){
     .controls{
@@ -122,6 +138,27 @@ section{
 .active-btn{
     background-color:var(--color-secondary);
     color:var(--color-white);
+}
+.moon{
+    position: fixed;
+    top: 30px;
+    right: 3%;
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+    background: var(--color-grey-4);
+    display: flex !important;
+    align-items: center;
+    color: var(--color-grey-2);
+    justify-content: center;
+    border-radius: 40px;
+    cursor: pointer;
+}
+@media(max-width:600px){
+    .moon{
+        width: 50px;
+        height: 50px;
+    }
 }
 /* End Icon */
 /* Start Sec1 */
@@ -199,13 +236,20 @@ section{
 .head-content .right h1{
     font-size: 3rem;
     font-weight: bold;
+    color: var(--color-white);
+    transition: all .4s ease-in-out;
+
 }
 .head-content .right h1 span{
     color: var(--color-secondary);
+    transition: all .4s ease-in-out;
 }
 .head-content .right p{
     margin: .15rem 0;
     line-height: 2rem;
+    color: var(--color-white);
+    transition: all .4s ease-in-out;
+
 }
 
 /* End Sec1 */
@@ -362,7 +406,7 @@ section{
     padding-bottom: 2rem;
 }
 .timeline .box .icon{
-    border-left: 1px solid var(--color-grey-4);
+    border-left: 1px solid var(--color-grey-5);
     margin-right: 2rem;
 }
 .timeline .box .icon i{
@@ -391,6 +435,7 @@ section{
 }
 .timeline .box .other h4{
     font-size: 1.4rem;
+    font-weight: 500;
 }
 .timeline .box .other h4 span{
     font-size: 1rem;
@@ -419,7 +464,7 @@ section{
     text-align: center;
 }
 .portfolio .text{
-    padding: 2rem 0;
+    padding: 4rem 0 2rem;
 }
 .portfolio .content{
     display: grid;
@@ -461,6 +506,7 @@ section{
     opacity: 0;
     transition: all .4s ease-in-out;
     transform: scale(0);
+    color: var(--color-white);
 }
 .portfolio .content .item:hover .hover-item{
     opacity: 1;
@@ -479,7 +525,7 @@ section{
 .portfolio .content .item .hover-item a{
     margin-right: 1rem;
     font-size: 1.5rem;
-    background: var(--color-balck);
+    background: var(--color-primary);
     border-radius: 40px;
     width: 50px;
     height: 50px;
@@ -496,7 +542,7 @@ section{
     transition: all .4s ease-in-out;
 }
 .portfolio .content .item .hover-item a:hover i{
-    color: var(--color-balck);
+    color: var(--color-primary);
 }
 /* End Sec3 */
 
@@ -637,7 +683,7 @@ section{
     background-color: var(--color-secondary);
 }
 .contact .icons a:hover i{
-    color: var(--color-balck);
+    color: var(--color-primary);
 }
 .contact form{
     display: flex;
@@ -664,7 +710,13 @@ textarea{
     height: 300px;
 }
 /* End Sec5 */
+/* light and night */
+.light{
+    background-color: var(--color-white) !important;
+}
+.zahri{
 
+}
 /* Start Animation */
 @keyframes scaleAnim {
     0%{

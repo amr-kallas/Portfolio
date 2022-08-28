@@ -2,6 +2,8 @@ let body=document.querySelector(".main-content");
 let secbtns=document.querySelector(".controls");
 let section=document.querySelectorAll(".section");
 let secbtn=document.querySelectorAll(".control");
+let moon=document.querySelector(".moon");
+let shape=document.querySelector(".shape");
 
 function activeBtn(){
     for(let i=0;i<secbtn.length;i++){
@@ -33,3 +35,8 @@ function activeBtn(){
 
 
 activeBtn();
+
+moon.addEventListener("click",(e) => {
+    let element =document.body;
+    element.classList.toggle('light');
+})
